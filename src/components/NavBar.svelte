@@ -1,12 +1,12 @@
 <script>
-    export let header = "";
-    export let navList = [];
+    export let HEADER;
+    export let NAVBAR_DATA;
 </script>
 
 <section id="nav-bar">
     <nav class="navbar main-bgcolor navbar-expand-md navbar-dark">
         <a class="navbar-brand company_brand" href="/">
-            {header}
+            {HEADER}
         </a>
         <button
             class="navbar-toggler"
@@ -21,7 +21,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                {#each navList as list}
+                {#each NAVBAR_DATA as list}
                     <li class="nav-item">
                         <a class="nav-link light-color" href={list.url}
                             >{list.label}</a
